@@ -17,7 +17,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-background/50 backdrop-blur-sm border-b border-accent-green/10">
+    <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-transparent">
       <Link href="/" className="flex items-center gap-3 group cursor-pointer">
         <div className="p-1.5 bg-accent-green text-background rounded-sm">
           <Terminal size={18} />

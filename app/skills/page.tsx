@@ -153,12 +153,12 @@ export default function SkillsPage() {
   return (
     <RetroBackground>
       <Navbar />
-      <main className="container mx-auto px-6 pt-42 pb-12 max-w-7xl h-screen overflow-hidden flex flex-col justify-center max-h-screen">
-        <section className="space-y-12 flex-1 flex flex-col justify-center">
+      <main className="container mx-auto px-6 pt-32 pb-12 max-w-6xl h-screen overflow-hidden flex flex-col">
+        <section className="flex-1 flex flex-col justify-center min-h-0 container mx-auto">
           {/* Header Section */}
-          <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 shrink-0">
-            <div className="space-y-6">
-              <div className="flex items-center gap-2 text-accent-green font-mono text-sm tracking-widest uppercase text-[10px] md:text-sm">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 shrink-0 mb-4">
+            <div className="space-y-4">
+              <div className="flex items-center gap-2 text-accent-green font-mono text-[10px] md:text-sm tracking-widest uppercase">
                 <Terminal size={14} />
                 <span>&gt; DIRECTORY: /SKILLS</span>
               </div>

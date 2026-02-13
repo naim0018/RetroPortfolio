@@ -11,15 +11,15 @@ export default function Home() {
     <RetroBackground>
       <Navbar />
 
-      <main className="container mx-auto px-6 pt-24 pb-12 max-w-7xl h-screen overflow-hidden flex flex-col justify-center">
+      <main className="container mx-auto px-6 pt-32 pb-12 max-w-6xl h-screen overflow-hidden flex flex-col justify-center">
         {/* Hero Section */}
         <section className="flex flex-col lg:flex-row gap-16 items-center flex-1">
-          <div className="flex-1 space-y-8">
-            <div className="space-y-2">
-              <span className="text-accent-green font-mono text-sm tracking-[0.3em] font-bold uppercase animate-pulse">
+          <div className="flex-1 space-y-8 text-center lg:text-left">
+            <div className="space-y-4">
+              <span className="text-accent-green font-mono text-[10px] md:text-xs tracking-[0.3em] font-bold uppercase animate-pulse">
                 &gt; INITIALIZING_DEVELOPER_SESSION...
               </span>
-              <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-none">
+              <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-none">
                 MD. KAZI
                 <span className="text-accent-blue retro-glow italic"> NAIM</span>
               </h1>
@@ -51,38 +51,22 @@ export default function Home() {
             </div>
 
             {/* Quick Stats Dashboard */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 border border-white/5 bg-white/1 backdrop-blur-md">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 border border-white/5 bg-white/1 backdrop-blur-md">
               <div className="flex flex-col">
-                <span className="text-[10px] text-accent-green/60 font-mono uppercase tracking-widest">
-                  Level
-                </span>
-                <span className="text-2xl font-black text-accent-green">
-                  24_SNR
-                </span>
+                <span className="text-[9px] text-accent-green/60 font-mono uppercase tracking-widest">Level</span>
+                <span className="text-xl font-black text-accent-green">24_SNR</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] text-accent-blue/60 font-mono uppercase tracking-widest">
-                  HP Status
-                </span>
-                <span className="text-2xl font-black text-accent-blue">
-                  STABLE
-                </span>
+                <span className="text-[9px] text-accent-blue/60 font-mono uppercase tracking-widest">HP Status</span>
+                <span className="text-xl font-black text-accent-blue">STABLE</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] text-accent-pink/60 font-mono uppercase tracking-widest">
-                  PRs Merged
-                </span>
-                <span className="text-2xl font-black text-accent-pink">
-                  842+
-                </span>
+                <span className="text-[9px] text-accent-pink/60 font-mono uppercase tracking-widest">PRs Merged</span>
+                <span className="text-xl font-black text-accent-pink">842+</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] text-accent-orange/60 font-mono uppercase tracking-widest">
-                  Coffee/Day
-                </span>
-                <span className="text-2xl font-black text-accent-orange">
-                  0x3A
-                </span>
+                <span className="text-[9px] text-accent-orange/60 font-mono uppercase tracking-widest">Coffee/Day</span>
+                <span className="text-xl font-black text-accent-orange">0x3A</span>
               </div>
             </div>
           </div>
