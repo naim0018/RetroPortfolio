@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Mono } from "next/font/google";
-import "./globals.css";
+import "./global.css";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${spaceMono.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${spaceMono.variable} antialiased`}>
         {children}
       </body>
     </html>

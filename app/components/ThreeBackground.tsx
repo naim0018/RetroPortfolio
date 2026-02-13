@@ -2,7 +2,12 @@
 
 import { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Float, Stars, MeshDistortMaterial, PerspectiveCamera } from "@react-three/drei";
+import {
+  Float,
+  Stars,
+  MeshDistortMaterial,
+  PerspectiveCamera,
+} from "@react-three/drei";
 import * as THREE from "three";
 
 function Particles({ count = 200 }) {
@@ -58,7 +63,7 @@ function FloatingShapes() {
           />
         </mesh>
       </Float>
-      
+
       <Float speed={1.5} rotationIntensity={2} floatIntensity={1}>
         <mesh position={[-5, -2, -8]}>
           <octahedronGeometry args={[1.5, 0]} />
@@ -93,11 +98,23 @@ export default function ThreeBackground() {
         <PerspectiveCamera makeDefault position={[0, 0, 10]} />
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} color="#00ff88" />
-        <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ff007a" />
-        
+        <pointLight
+          position={[-10, -10, -10]}
+          intensity={0.5}
+          color="#ff007a"
+        />
+
         <Particles count={300} />
         <FloatingShapes />
-        <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
+        <Stars
+          radius={100}
+          depth={50}
+          count={5000}
+          factor={4}
+          saturation={0}
+          fade
+          speed={1}
+        />
       </Canvas>
     </div>
   );

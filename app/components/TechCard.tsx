@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, animate, useMotionValueEvent } from "framer-motion";
+import { useEffect, useState } from "react";
 import { type LucideIcon } from "lucide-react";
 
 interface TechCardProps {
@@ -8,9 +9,32 @@ interface TechCardProps {
   icon: LucideIcon;
   level: number;
   color?: string;
+  keyTrigger?: number | string;
 }
 
-export default function TechCard({ name, icon: Icon, level, color = "var(--accent-green)" }: TechCardProps) {
+export default function TechCard({ 
+  name, 
+  icon: Icon, 
+  level, 
+  color = "var(--accent-green)",
+  keyTrigger
+}: TechCardProps) {
+  const count = useMotionValue<number>(0);
+  const [displayValue, setDisplayValue] = useState(0);
+
+  useMotionValueEvent(count, "change", (latest) => {
+    setDisplayValue(Math.round(latest));
+  });
+
+  useEffect(() => {
+    count.set(0);
+    const controls = animate(count, level, {
+      duration: 1.5,
+      ease: [0.43, 0.13, 0.23, 0.96],
+    });
+    return () => controls.stop();
+  }, [level, keyTrigger, count]);
+
   return (
     <motion.div 
       whileHover={{ scale: 1.05 }}
@@ -33,18 +57,36 @@ export default function TechCard({ name, icon: Icon, level, color = "var(--accen
           >
             <Icon size={20} />
           </div>
-          <span className="text-[10px] font-mono opacity-40 uppercase" style={{ color: color }}>LVL_{level}</span>
+          <motion.span 
+            className="text-[11px] font-mono font-bold uppercase px-2 py-0.5 border" 
+            style={{ 
+              color: color,
+              borderColor: `${color}33`,
+              backgroundColor: `${color}0D`
+            }}
+          >
+            LVL_{displayValue}
+          </motion.span>
         </div>
         
         <div>
           <h3 className="text-sm font-bold tracking-wider uppercase">{name}</h3>
-          <div className="mt-2 h-1 w-full overflow-hidden" style={{ backgroundColor: `${color}1A` }}>
+          <div className="mt-2 h-1.5 w-full bg-white/5 relative overflow-hidden">
             <motion.div 
+              key={keyTrigger}
               initial={{ width: 0 }}
-              whileInView={{ width: `${level}%` }}
-              className="h-full"
+              animate={{ width: `${level}%` }}
+              className="h-full relative z-10"
               style={{ backgroundColor: color }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              transition={{ duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] }}
+            />
+            {/* Animated background pulse */}
+            <motion.div
+              initial={{ x: "-100%" }}
+              animate={{ x: "100%" }}
+              transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+              className="absolute inset-0 z-20 bg-linear-to-r from-transparent via-white/20 to-transparent"
+              style={{ width: "30%" }}
             />
           </div>
         </div>
