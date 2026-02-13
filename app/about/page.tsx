@@ -10,15 +10,15 @@ export default function AboutPage() {
     <RetroBackground>
       <Navbar />
 
-      <main className="container mx-auto px-6 pt-24 pb-12 max-w-7xl h-screen overflow-hidden flex flex-col justify-center">
+      <main className="container mx-auto px-6 pt-32 pb-12 max-w-6xl h-screen overflow-hidden flex flex-col justify-center">
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <header className="mb-8 space-y-4">
-              <div className="flex items-center gap-2 text-accent-green font-mono text-sm tracking-widest uppercase">
+            <header className="mb-4 space-y-2">
+              <div className="flex items-center gap-2 text-accent-green font-mono text-[10px] md:text-sm tracking-widest uppercase">
                 <Terminal size={14} />
                 <span>&gt; IDENTITY_VERIFICATION: /ABOUT_ME</span>
               </div>
-              <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-tight">
+              <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-tight">
                 MD. KAZI <span className="text-accent-green italic">NAIM</span>
               </h1>
             </header>

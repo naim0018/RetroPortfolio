@@ -43,23 +43,24 @@ export default function ProjectsPage() {
     <RetroBackground>
       <Navbar />
 
-      <main className="container mx-auto px-6 pt-24 pb-12 max-w-7xl h-screen overflow-hidden flex flex-col justify-center">
-        <header className="mb-16 space-y-4">
-          <div className="flex items-center gap-2 text-accent-green font-mono text-sm tracking-widest uppercase">
-            <Terminal size={14} />
-            <span>&gt; DIRECTORY: /PROJECTS</span>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-tight">
-            ARCHIVED <span className="text-accent-green italic">SESSIONS</span>
-          </h1>
-          <p className="text-foreground/50 max-w-2xl font-medium">
-            A curated list of tactical web deployments and technical research
-            projects. All sessions are encrypted and stored in the decentralized
-            neural network.
-          </p>
-        </header>
+      <main className="container mx-auto px-6 pt-32 pb-12 max-w-6xl h-screen overflow-hidden flex flex-col">
+        <section className="flex-1 flex flex-col justify-center min-h-0 container mx-auto">
+          <header className="mb-4 space-y-2 shrink-0">
+            <div className="flex items-center gap-2 text-accent-green font-mono text-[10px] md:text-sm tracking-widest uppercase">
+              <Terminal size={14} />
+              <span>&gt; DIRECTORY: /PROJECTS</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-tight">
+              ARCHIVED <span className="text-accent-green italic">SESSIONS</span>
+            </h1>
+            <p className="text-foreground/50 max-w-2xl font-medium">
+              A curated list of tactical web deployments and technical research
+              projects. All sessions are encrypted and stored in the decentralized
+              neural network.
+            </p>
+          </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, i) => (
             <motion.div
               key={i}
@@ -158,6 +159,7 @@ export default function ProjectsPage() {
             </motion.div>
           ))}
         </div>
+        </section>
       </main>
     </RetroBackground>
   );
