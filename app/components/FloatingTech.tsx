@@ -15,7 +15,7 @@ function TechOrb({ color }: { color: string }) {
 
   return (
     <Float speed={4} rotationIntensity={1} floatIntensity={2}>
-      <Icosahedron ref={meshRef} args={[1, 15]} scale={2}>
+      <Icosahedron ref={meshRef} args={[1, 2]} scale={2}>
         <MeshDistortMaterial
           color={color}
           speed={2}

@@ -207,7 +207,7 @@ export default function WarpBackground() {
     let targetCx = width / 2;
     let targetCy = height / 2;
 
-    const STAR_COUNT = 1000;
+    const STAR_COUNT = 400;
     const BASE_SPEED = 2;
     const WARP_SPEED = 120;
     const ACCELERATION = 3;
@@ -220,8 +220,8 @@ export default function WarpBackground() {
     const nebulas: Nebula[] = [];
 
     const resize = () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
+      width = canvas.width = Math.max(1, window.innerWidth);
+      height = canvas.height = Math.max(1, window.innerHeight);
       targetCx = width / 2;
       targetCy = height / 2;
       cx = width / 2;
@@ -287,7 +287,7 @@ export default function WarpBackground() {
       }
 
       nebulas.forEach(n => { n.update(width, height); n.draw(ctx, currentSpeed, WARP_SPEED); });
-      stars.sort((a, b) => b.z - a.z);
+      // Removed expensive sort as stars are simple points
       stars.forEach(s => { s.update(width, height, currentSpeed); s.draw(ctx, width, cx, cy, currentSpeed, activeWarp); });
       shootingStars.forEach(ss => { ss.update(width, height, currentSpeed); ss.draw(ctx); });
 
