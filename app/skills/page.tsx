@@ -2,11 +2,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import {
-  Terminal,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { Terminal, ChevronLeft, ChevronRight } from "lucide-react";
 import TechCard from "../components/TechCard";
 import RetroBackground from "../components/RetroBackground";
 import Navbar from "../components/Navbar";
@@ -31,11 +27,11 @@ const skillCategories = [
         level: 98,
         color: "var(--accent-orange)",
       },
-      { 
-        name: "CSS3", 
+      {
+        name: "CSS3",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-        level: 95, 
-        color: "var(--accent-blue)" 
+        level: 95,
+        color: "var(--accent-blue)",
       },
       {
         name: "JavaScript",
@@ -43,17 +39,17 @@ const skillCategories = [
         level: 92,
         color: "var(--accent-green)",
       },
-      { 
-        name: "React", 
+      {
+        name: "React",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-        level: 95, 
-        color: "var(--accent-blue)" 
+        level: 95,
+        color: "var(--accent-blue)",
       },
-      { 
-        name: "Next.js", 
+      {
+        name: "Next.js",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-        level: 90, 
-        color: "var(--accent-pink)" 
+        level: 90,
+        color: "var(--accent-pink)",
       },
       {
         name: "Tailwind CSS",
@@ -98,11 +94,11 @@ const skillCategories = [
         level: 85,
         color: "var(--accent-blue)",
       },
-      { 
-        name: "JWT Auth", 
+      {
+        name: "JWT Auth",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg",
-        level: 88, 
-        color: "var(--accent-pink)" 
+        level: 88,
+        color: "var(--accent-pink)",
       },
     ],
   },
@@ -135,11 +131,11 @@ const skillCategories = [
         level: 90,
         color: "var(--accent-purple)",
       },
-      { 
-        name: "Wix", 
+      {
+        name: "Wix",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wix/wix-original.svg",
-        level: 95, 
-        color: "var(--accent-blue)" 
+        level: 95,
+        color: "var(--accent-blue)",
       },
     ],
   },
@@ -165,8 +161,8 @@ export default function SkillsPage() {
   return (
     <RetroBackground>
       <Navbar />
-      <main className="container mx-auto px-6 pt-32 pb-12 max-w-6xl h-screen overflow-hidden flex flex-col">
-        <section className="flex-1 flex flex-col justify-center min-h-0 container mx-auto gap-10">
+      <main className="container mx-auto px-6 pt-14 sm:pt-32 pb-12 max-w-6xl min-h-screen flex flex-col justify-center">
+        <section className="flex-1 flex flex-col justify-center min-h-0 container mx-auto gap-8 py-8 lg:py-0">
           {/* Header Section */}
           <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 shrink-0 mb-4">
             <div className="space-y-4">
@@ -185,10 +181,8 @@ export default function SkillsPage() {
             </p>
           </div>
 
-          {/* Main Category Slider Container */}
           <div className="relative flex-1 min-h-0 flex flex-col justify-center">
-            {/* Shared Navigation Header */}
-            <div className="absolute top-0 right-0 z-50 pointer-events-auto">
+            <div className="w-full relative flex justify-end mb-4 md:mb-0 md:absolute md:top-0 md:right-0 md:w-auto z-50 pointer-events-auto">
               <div className="flex items-center gap-4 bg-background/80 p-2 px-4 border border-white/10 backdrop-blur-md">
                 <button className="skill-nav-prev p-1 hover:text-accent-pink transition-colors cursor-pointer group">
                   <ChevronLeft
@@ -208,7 +202,6 @@ export default function SkillsPage() {
 
                 <div className="w-px h-6 bg-white/20 mx-2" />
 
-                {/* Autoplay Progress Indicator */}
                 <div className="flex items-center gap-3 font-mono text-[10px]">
                   <div className="relative w-8 h-8 flex items-center justify-center">
                     <svg className="w-full h-full -rotate-90">
@@ -244,7 +237,6 @@ export default function SkillsPage() {
                 </div>
               </div>
             </div>
-
             <Swiper
               modules={[Autoplay, Navigation, Pagination, EffectFade]}
               effect="fade"
@@ -325,8 +317,9 @@ export default function SkillsPage() {
         </section>
       </main>
 
-
-      <style dangerouslySetInnerHTML={{__html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         .custom-bullet {
           width: 8px !important;
           height: 8px !important;
@@ -352,7 +345,9 @@ export default function SkillsPage() {
         .skill-pagination {
           display: flex !important;
         }
-      `}} />
+      `,
+        }}
+      />
     </RetroBackground>
   );
 }
