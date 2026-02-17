@@ -68,9 +68,9 @@ export default function ContactPage() {
     <RetroBackground>
       <Navbar />
 
-      <main className="container mx-auto px-6 pt-32 pb-12 max-w-7xl h-screen overflow-hidden flex flex-col">
+      <main className="container mx-auto px-6  pb-12 max-w-6xl h-screen overflow-hidden flex flex-col">
         <section className="flex-1 flex flex-col justify-center min-h-0 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start overflow-hidden flex-1 min-h-0">
+          <div className="grid grid-cols-1 lg:grid-cols-5 max-h-fit gap-8 items-start overflow-hidden flex-1 min-h-0">
             {/* Left Side: Contact Form - Takes 3 columns */}
             <div className="col-span-3">
               {/* Header with Glitch Effect */}

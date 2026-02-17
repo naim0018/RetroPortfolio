@@ -18,7 +18,7 @@ export default function AboutPage() {
                 <Terminal size={14} />
                 <span>&gt; IDENTITY_VERIFICATION: /ABOUT_ME</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-tight">
+              <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-tight">
                 MD. KAZI <span className="text-accent-green italic">NAIM</span>
               </h1>
             </header>
@@ -27,16 +27,18 @@ export default function AboutPage() {
                 #BIO_DATA
               </div>
               <p className="text-xl leading-relaxed font-medium">
-                I am a passionate web developer with a strong foundation in
-                full-stack development. My journey in programming started with
-                solving complex problems, and now I channel that analytical
-                mindset into creating elegant web solutions.
+                I am a frontend-focused React developer passionate about
+                building clean, responsive, and high-performance web
+                applications. I enjoy transforming complex ideas into intuitive
+                user interfaces that feel smooth and engaging.
               </p>
+
               <p className="mt-4 text-foreground/60 leading-relaxed font-medium">
-                I specialize in building scalable, high-performance web
-                applications using modern technologies like React, Next.js, and
-                Node.js. I believe in clean code, efficient architecture, and
-                creating user-centric experiences that make a difference.
+                I specialize in React and Next.js, crafting scalable UI
+                architectures using Tailwind CSS, Redux, and Redux Toolkit for
+                state management. I enhance user experience with thoughtful
+                animations using Framer Motion, focusing on performance,
+                maintainability, and pixel-perfect design.
               </p>
 
               <div className="mt-8 pt-8 border-t border-white/5 flex flex-wrap gap-8">
@@ -58,7 +60,7 @@ export default function AboutPage() {
                   <span className="block text-[10px] font-mono text-accent-orange/60 uppercase">
                     Exp
                   </span>
-                  <span className="font-bold text-lg">Lvl 3+ Years</span>
+                  <span className="font-bold text-lg">1+ Years</span>
                 </div>
               </div>
             </div>
