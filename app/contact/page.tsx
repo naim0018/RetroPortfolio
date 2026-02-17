@@ -104,7 +104,7 @@ export default function ContactPage() {
                         ESTABLISH
                       </motion.span>
                     </span>{" "}
-                    <span className="text-accent-pink italic relative inline-block">
+                    <span className="text-accent-orange italic relative inline-block">
                       CONNECT
                       <motion.span
                         className="absolute inset-0 text-accent-orange opacity-50"

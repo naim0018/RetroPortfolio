@@ -11,7 +11,7 @@ export default function Home() {
     <RetroBackground>
       <Navbar />
 
-      <main className="container mx-auto px-6 pt-32 pb-12 max-w-6xl h-screen overflow-hidden flex flex-col justify-center">
+      <main className="container mx-auto px-6  pb-12 max-w-6xl h-screen overflow-hidden flex flex-col justify-center">
         {/* Hero Section */}
         <section className="flex flex-col lg:flex-row gap-16 items-center flex-1">
           <div className="flex-1 space-y-8 text-center lg:text-left">
@@ -53,20 +53,20 @@ export default function Home() {
             {/* Quick Stats Dashboard */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 border border-white/5 bg-white/1 backdrop-blur-md">
               <div className="flex flex-col">
-                <span className="text-[9px] text-accent-green/60 font-mono uppercase tracking-widest">Level</span>
-                <span className="text-xl font-black text-accent-green">24_SNR</span>
+                <span className="text-[9px] text-accent-green/60 font-mono uppercase tracking-widest">Repositories</span>
+                <span className="text-xl font-black text-accent-green">50+</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-[9px] text-accent-blue/60 font-mono uppercase tracking-widest">HP Status</span>
-                <span className="text-xl font-black text-accent-blue">STABLE</span>
+                <span className="text-[9px] text-accent-blue/60 font-mono uppercase tracking-widest">Commits_Last_Year</span>
+                <span className="text-xl font-black text-accent-blue">1.2k+</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-[9px] text-accent-pink/60 font-mono uppercase tracking-widest">PRs Merged</span>
-                <span className="text-xl font-black text-accent-pink">842+</span>
+                <span className="text-[9px] text-accent-pink/60 font-mono uppercase tracking-widest">APIs_Integrated</span>
+                <span className="text-xl font-black text-accent-pink">200+</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-[9px] text-accent-orange/60 font-mono uppercase tracking-widest">Coffee/Day</span>
-                <span className="text-xl font-black text-accent-orange">0x3A</span>
+                <span className="text-[9px] text-accent-orange/60 font-mono uppercase tracking-widest">Performance_Score</span>
+                <span className="text-xl font-black text-accent-orange">90+</span>
               </div>
             </div>
           </div>
