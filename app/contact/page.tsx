@@ -68,11 +68,11 @@ export default function ContactPage() {
     <RetroBackground>
       <Navbar />
 
-      <main className="container mx-auto px-6  pb-12 max-w-6xl h-screen overflow-hidden flex flex-col">
-        <section className="flex-1 flex flex-col justify-center min-h-0 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-5 max-h-fit gap-8 items-start overflow-hidden flex-1 min-h-0">
-            {/* Left Side: Contact Form - Takes 3 columns */}
-            <div className="col-span-3">
+      <main className="container mx-auto px-6 pt-14 sm:pt-24 pb-12 max-w-6xl min-h-screen flex flex-col">
+        <section className="flex-1 flex flex-col justify-center py-8 lg:py-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start relative z-10">
+            {/* Left Side: Contact Form */}
+            <div className="">
               {/* Header with Glitch Effect */}
               <header className="mb-10 space-y-3 shrink-0">
                 <motion.div
@@ -293,8 +293,8 @@ export default function ContactPage() {
               </motion.div>
             </div>
 
-            {/* Right Side: Access Points & Status - Takes 2 columns */}
-            <div className="lg:col-span-2 space-y-6 flex flex-col h-full">
+            {/* Right Side: Access Points & Status */}
+            <div className="space-y-6 flex flex-col h-full">
               {/* Social Links */}
               <motion.div
                 className="grid gap-4"

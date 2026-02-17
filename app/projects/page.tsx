@@ -84,8 +84,8 @@ export default function ProjectsPage() {
     <RetroBackground>
       <Navbar />
 
-      <main className="container mx-auto px-6 pt-32 pb-12 max-w-6xl h-screen overflow-hidden flex flex-col max-h-fit">
-        <section className="flex-1 flex flex-col justify-center min-h-0 container mx-auto gap-8">
+      <main className="container mx-auto px-6 pt-14 sm:pt-24 pb-12 max-w-6xl min-h-fit flex flex-col justify-center">
+        <section className="flex-1 flex flex-col justify-center min-h-0 container mx-auto gap-8 py-8 lg:py-0">
           {/* Header Section */}
           <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 shrink-0">
             <div className="space-y-4">
@@ -104,13 +104,13 @@ export default function ProjectsPage() {
           {/* Main Project Slider Container */}
           <div className="relative flex-1 min-h-0 flex flex-col justify-center gap-8">
             {/* Shared Navigation Header */}
-            <div className=" z-50 pointer-events-auto w-full flex items-center justify-between gap-10">
-              <p className="text-foreground/50 text-[10px] w-full md:text-sm font-mono leading-relaxed">
+            <div className="z-20 pointer-events-auto w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 lg:gap-10">
+              <p className="text-foreground/50 text-xs sm:text-sm lg:text-base font-mono leading-relaxed max-w-2xl">
                 A curated list of tactical web deployments and technical
                 research projects. All sessions are encrypted and stored in the
                 decentralized neural network.
               </p>
-              <div className="flex items-center justify-end gap-4 bg-background/80 p-2 px-4 border border-white/10 backdrop-blur-md">
+              <div className="flex items-center justify-end gap-4 bg-background/80 p-2 px-4 border border-white/10 backdrop-blur-md self-end lg:self-auto">
                 <button className="project-nav-prev p-1 hover:text-accent-green transition-colors cursor-pointer group">
                   <ChevronLeft
                     size={20}
@@ -204,10 +204,10 @@ export default function ProjectsPage() {
                 pauseOnMouseEnter: true,
               }}
               onAutoplayTimeLeft={onAutoplayTimeLeft}
-              className="w-full h-full"
+              className="w-full !h-auto pb-12"
             >
               {projects.map((project, i) => (
-                <SwiperSlide key={i} className="h-auto">
+                <SwiperSlide key={i} className="!h-auto">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
