@@ -10,7 +10,7 @@ export default function AboutPage() {
     <RetroBackground>
       <Navbar />
 
-      <main className="container mx-auto px-6 pt-32 pb-12 max-w-6xl h-screen overflow-hidden flex flex-col justify-center">
+      <main className="container mx-auto px-6 pb-12 max-w-6xl h-screen overflow-hidden flex flex-col justify-center">
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <header className="mb-4 space-y-2">
