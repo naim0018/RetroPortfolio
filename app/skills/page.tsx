@@ -3,20 +3,7 @@
 
 import { useState, useRef } from "react";
 import {
-  Cpu,
-  Layout,
-  Code2,
-  Rocket,
-  GitBranch,
   Terminal,
-  FileCode,
-  Palette,
-  Database,
-  Server,
-  ShieldCheck,
-  Key,
-  Workflow,
-  Globe,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
@@ -40,28 +27,43 @@ const skillCategories = [
     skills: [
       {
         name: "HTML5",
-        icon: FileCode,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
         level: 98,
         color: "var(--accent-orange)",
       },
-      { name: "CSS3", icon: Palette, level: 95, color: "var(--accent-blue)" },
+      { 
+        name: "CSS3", 
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        level: 95, 
+        color: "var(--accent-blue)" 
+      },
       {
         name: "JavaScript",
-        icon: Code2,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
         level: 92,
         color: "var(--accent-green)",
       },
-      { name: "React", icon: Rocket, level: 95, color: "var(--accent-blue)" },
-      { name: "Next.js", icon: Layout, level: 90, color: "var(--accent-pink)" },
+      { 
+        name: "React", 
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        level: 95, 
+        color: "var(--accent-blue)" 
+      },
+      { 
+        name: "Next.js", 
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+        level: 90, 
+        color: "var(--accent-pink)" 
+      },
       {
         name: "Tailwind CSS",
-        icon: Palette,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
         level: 92,
         color: "var(--accent-blue)",
       },
       {
         name: "Redux Toolkit",
-        icon: Workflow,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
         level: 85,
         color: "var(--accent-purple)",
       },
@@ -74,29 +76,34 @@ const skillCategories = [
     skills: [
       {
         name: "Node.js",
-        icon: Server,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
         level: 80,
         color: "var(--accent-green)",
       },
       {
         name: "Express.js",
-        icon: Cpu,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
         level: 82,
         color: "var(--accent-orange)",
       },
       {
         name: "MongoDB",
-        icon: Database,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
         level: 78,
         color: "var(--accent-green)",
       },
       {
         name: "Zod",
-        icon: ShieldCheck,
+        icon: "https://zod.dev/logo.svg",
         level: 85,
         color: "var(--accent-blue)",
       },
-      { name: "JWT Auth", icon: Key, level: 88, color: "var(--accent-pink)" },
+      { 
+        name: "JWT Auth", 
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg",
+        level: 88, 
+        color: "var(--accent-pink)" 
+      },
     ],
   },
 
@@ -106,13 +113,13 @@ const skillCategories = [
     skills: [
       {
         name: "Git",
-        icon: GitBranch,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
         level: 88,
         color: "var(--accent-orange)",
       },
       {
         name: "Github",
-        icon: GitBranch,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
         level: 88,
         color: "var(--accent-blue)",
       },
@@ -124,11 +131,16 @@ const skillCategories = [
     skills: [
       {
         name: "Wix Studio",
-        icon: Globe,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wix/wix-original.svg",
         level: 90,
         color: "var(--accent-purple)",
       },
-      { name: "Wix", icon: Globe, level: 95, color: "var(--accent-blue)" },
+      { 
+        name: "Wix", 
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wix/wix-original.svg",
+        level: 95, 
+        color: "var(--accent-blue)" 
+      },
     ],
   },
 ];
@@ -154,7 +166,7 @@ export default function SkillsPage() {
     <RetroBackground>
       <Navbar />
       <main className="container mx-auto px-6 pt-32 pb-12 max-w-6xl h-screen overflow-hidden flex flex-col">
-        <section className="flex-1 flex flex-col justify-center min-h-0 container mx-auto">
+        <section className="flex-1 flex flex-col justify-center min-h-0 container mx-auto gap-10">
           {/* Header Section */}
           <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 shrink-0 mb-4">
             <div className="space-y-4">
@@ -313,7 +325,8 @@ export default function SkillsPage() {
         </section>
       </main>
 
-      <style jsx global>{`
+
+      <style dangerouslySetInnerHTML={{__html: `
         .custom-bullet {
           width: 8px !important;
           height: 8px !important;
@@ -339,7 +352,7 @@ export default function SkillsPage() {
         .skill-pagination {
           display: flex !important;
         }
-      `}</style>
+      `}} />
     </RetroBackground>
   );
 }

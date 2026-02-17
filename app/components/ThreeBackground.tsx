@@ -11,6 +11,8 @@ import {
 import * as THREE from "three";
 
 function Particles({ count = 200 }) {
+  // Generate random positions once and memoize them
+  // This ensures Math.random() is only called during initial mount, not on every render
   const points = useMemo(() => {
     const p = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
@@ -19,7 +21,8 @@ function Particles({ count = 200 }) {
       p[i * 3 + 2] = (Math.random() - 0.5) * 20;
     }
     return p;
-  }, [count]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Empty deps array ensures this only runs once
 
   const ref = useRef<THREE.Points>(null!);
   useFrame((state) => {
